@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login example</title>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      background: linear-gradient(rgba(2,0,36,1), rgba(0,95,101,1));
+    }
+    .login-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #040b1c;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 10px;
+      box-shadow: 0px 5px 15px black;
+      padding: 40px;
+    }
+
+    .title {
+      font-size: 1.3rem;
+      color: white;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 50px;
+    }
+
+    .login-box input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+    }
+
+    .login-box input:focus {
+      outline: none;
+    }
+
+    .submit {
+      display: inline-box;
+      position: relative;
+      padding: 10px 20px;
+      color: #03e9f4;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      overflow: hidden;
+    }
+
+    .submit span {
+      position: absolute;
+      display: block;
+    }
+
+    .submit span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, #03e9f4);
+      height: 2px;
+      animation: 1s linear btn-animation1 infinite;
+    }
+
+    @keyframes btn-animation1 {
+      from {
+        left: -100%;
+      }
+      to {
+        left: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <div>
+      <div class="title">
+        Login
+      </div>
+      <input type="text" placeholder="Username"/>
+      <input type="text" placeholder="Password"/>
+    </div>
+    <div>
+      <a class="submit">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        submit
+      </a>
+    </div>
+  </div>
+</body>
+<script>
+</script>
+</html>
